@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eelam Heroes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <div class="col-sm-12">
+            <header>
+                <div class="sticky-top">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                    <a class="navbar-brand" href="#"><img src="./img/EELAMMAAVERARLOGO.png" class="w-25"/></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto nav-text">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">தளம் <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">விபரங்கள்</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#">தொடர்புகட்கு</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#">எம்மைப்பற்றி</a>
+                        </li>
+                      </ul>
+                    
+                    </div>
+                  </nav>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="results-container">
+ <div class="row no-gutters">
+  <div class="col-sm-3 ">
+
+    <div class="panel sticky-top">
+
+        <div class="open-filter">
+            <h1>தேடல்</h1>
+        </div>
+
+        
+
+        <form action="search/results/" method="get">
+
+            <a href="#" class="clear-filters">Clear Filters</a>
+
+            <input type="text" class="autoupdate" name="forenames" placeholder="இயக்கப்பெயர்" value="">
+
+            <input type="text" class="autoupdate" name="surname" placeholder="இயற்பெயர்" value="">
+
+
+            <div class="date_1">
+                <input type="text" name="date_of_death" placeholder="வீரப்பிறப்பு நாள்" class="datepicker" id="date_of_death_field" autocomplete="off" value="">
+            <div class="pika-single is-hidden is-bound" style="position: static; left: auto; top: auto;"></div></div>
+
+            <div class="date_2">
+                <input type="text" name="date_of_death_2" placeholder="வீரச்சாவு நாள்" class="datepicker" id="date_of_death_2_field" autocomplete="off" value="">
+            <div class="pika-single is-hidden is-bound" style="position: static; left: auto; top: auto;"></div></div>
+        
+            <select class="nationality select2-container select2-container--default select2-hidden-accessible" dir="ltr" id="nationality" name="nationality" tabindex="-1" aria-hidden="true">
+                <option selected="selected" class="disabled placeholder" disabled="disabled">மாவட்டரீதியாக</option>
+                <option value="6">United Kingdom Forces</option>
+                <option value="1">Australian Forces</option>
+                <option value="4">New Zealand Forces</option>
+                <option value="2">Canadian Forces</option>
+                <option value="3">Indian Forces</option>
+                <option value="5">South African Forces</option>
+                <option value="">Any</option>
+            </select>
+            <select class="nationality select2-container select2-container--default select2-hidden-accessible" dir="ltr" id="nationality" name="nationality" tabindex="-1" aria-hidden="true">
+                <option selected="selected" class="disabled placeholder" disabled="disabled">துயிலுமில்லவாரியாக</option>
+                <option value="6">United Kingdom Forces</option>
+                <option value="1">Australian Forces</option>
+                <option value="4">New Zealand Forces</option>
+                <option value="2">Canadian Forces</option>
+                <option value="3">Indian Forces</option>
+                <option value="5">South African Forces</option>
+                <option value="">Any</option>
+            </select>
+         
+
+            <input type="hidden" id="sortby" name="sortby" value="">
+            <!-- <input type="hidden" id="similar"  name="similar" value=""/> -->
+            <input type="hidden" id="list" name="list" value="">
+
+            <input type="hidden" id="regiment_id" name="regiment_id" value="">
+            <input type="hidden" id="rank_id" name="rank_id" value="">
+            <input type="hidden" id="cemetery_id" name="cemetery_id" value="">
+            <input type="hidden" id="award_id" name="award_id" value="">
+
+            <button class="ui_grey ui_grey_right filter_btn link1">தேடுக</button>
+
+        </form>
+
+    </div>
+  </div>
+  <div class="col-sm-9">
+      <div class="details">
+        <div class="row no-gutters mt-20">
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="soldier cf [[+alt]]">
+                    <a href="/profiles/soldier/33616/">
+                    <div class="head">
+                    <p class="name" title="F Heath">சங்கர் (சுரேஸ்)</p>
+                    <p class="small">செல்வச்சந்திரன் சந்திரநாதன்</p>
+                    </div>
+                    <div class="info">
+                    <p>2ம் லெப்டினன்ட்</p>
+                    <p>வீரச்சாவு 09/04/1918</p>
+                    <p>வீரப்பிறப்பு 09/04/1918</p>
+                    </div>
+                    <button class="btn-default">சங்கர் (சுரேஸ்) பற்றி முழுமையான விபரம்</button>
+                    </a>
+                    </div>
+            </div>
+        </div>
+      </div>
+   
+
+    <footer class="footer">
+        <div class="row no-gutters">
+          <div class="col-sm-12 ">
+       sdad
+          </div>
+        </div>
+       </footer>
+  </div>
+ </div>
+</div>
+
+   
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://use.fontawesome.com/3a5ddac825.js"></script>
+
+</body>
+</html>
